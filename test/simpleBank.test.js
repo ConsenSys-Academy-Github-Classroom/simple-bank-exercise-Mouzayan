@@ -57,7 +57,7 @@ contract("SimpleBank", function (accounts) {
       "only enrolled users should be marked enrolled",
     );
   });
-
+//5
   it("should deposit correct amount", async () => {
     await instance.enroll({ from: alice });
     await instance.deposit({ from: alice, value: deposit });
@@ -69,7 +69,7 @@ contract("SimpleBank", function (accounts) {
       "deposit amount incorrect, check deposit method",
     );
   });
-
+//6
   it("should log a deposit event when a deposit is made", async () => {
     await instance.enroll({ from: alice });
     const result = await instance.deposit({ from: alice, value: deposit });
@@ -91,7 +91,7 @@ contract("SimpleBank", function (accounts) {
       "LogDepositMade event amount property not emitted, check deposit method",
     );
   });
-
+//test 6
   it("should withdraw correct amount", async () => {
     const initialAmount = 0;
     await instance.enroll({ from: alice });
